@@ -1,5 +1,8 @@
 package hu.petrik;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -22,6 +25,30 @@ public class Main {
             bejegyzesLista.add(b);
         }
 
+        fajlBeolvas("bejegyzesek.txt");
+
+
+    }
+
+    public static void fajlBeolvas(String fajlNev) {
+        try {
+            FileReader fr = new FileReader(fajlNev);
+            BufferedReader br = new BufferedReader(fr);
+            String sor = br.readLine();
+            while (sor != null){
+                String[] adatok = sor.split(";");
+                Bejegyzes bejegyzesek = new Bejegyzes(adatok[0],adatok[1]);
+                bejegyzesLista.add(bejegyzesek);
+                sor = br.readLine();
+            }
+            br.close();
+            fr.close();
+
+
+        }
+        catch (IOException e){
+            System.out.println(e.getMessage());
+        }
 
     }
 

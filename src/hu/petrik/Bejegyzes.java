@@ -28,6 +28,7 @@ public class Bejegyzes {
 
     public void setTartalom(String tartalom) {
         this.tartalom = tartalom;
+        this.szerkesztve = LocalDateTime.now();
 
     }
 
@@ -46,5 +47,13 @@ public class Bejegyzes {
 
     public void like() {
         this.likeok++;
+    }
+
+    @Override
+    public String toString() {
+        return this.szerzo + " - " + this.likeok + " - "
+                + this.letrejott + "\n" +
+                " Szerkesztve: " + this.szerkesztve
+                + "\n" + this.tartalom;
     }
 }

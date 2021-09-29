@@ -15,15 +15,15 @@ public class Main {
     static Random rnd = new Random();
 
     public static void main(String[] args) {
-        Bejegyzes bejegyzes1 = new Bejegyzes("Lee","Igen, ez jó");
-        Bejegyzes bejegyzes2 = new Bejegyzes("Pee","Nem jó");
+        Bejegyzes bejegyzes1 = new Bejegyzes("Lee","Igen, ez jó bejegyzés");
+        Bejegyzes bejegyzes2 = new Bejegyzes("Pee","Nem jó bejegyzés");
 	    bejegyzesLista.add(bejegyzes1);
 	    bejegyzesLista.add(bejegyzes2);
 
         System.out.print("Kérek egy darabszámot: ");
         int darabszam = sc.nextInt();
         for (int i = 0; i < darabszam; i++) {
-            Bejegyzes b = new Bejegyzes("Sz","Létrehozás");
+            Bejegyzes b = new Bejegyzes("Sz","Ez egy bejegyzés");
             bejegyzesLista.add(b);
         }
 

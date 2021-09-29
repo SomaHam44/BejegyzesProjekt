@@ -17,4 +17,34 @@ public class Bejegyzes {
         this.letrejott = LocalDateTime.now();
         this.szerkesztve = LocalDateTime.now();
     }
+
+    public String getSzerzo() {
+        return this.szerzo;
+    }
+
+    public String getTartalom() {
+        return this.tartalom;
+    }
+
+    public void setTartalom(String tartalom) {
+        this.tartalom = tartalom;
+
+    }
+
+    public int getLikeok() {
+        return this.likeok;
+    }
+
+    public LocalDateTime getLetrejott() {
+        return this.letrejott;
+
+    }
+
+    public LocalDateTime getSzerkesztve() {
+        return this.szerkesztve;
+    }
+
+    public void like() {
+        this.likeok++;
+    }
 }

@@ -53,7 +53,7 @@ public class Bejegyzes {
     public String toString() {
         return this.szerzo + " - " + this.likeok + " - "
                 + this.letrejott + "\n" +
-                " Szerkesztve: " + this.szerkesztve
+                "Szerkesztve: " + this.szerkesztve
                 + "\n" + this.tartalom;
     }
 }

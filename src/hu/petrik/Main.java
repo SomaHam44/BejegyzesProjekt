@@ -5,12 +5,14 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 
 public class Main {
     static List<Bejegyzes> bejegyzesLista = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
+    static Random rnd = new Random();
 
     public static void main(String[] args) {
         Bejegyzes bejegyzes1 = new Bejegyzes("Lee","Igen, ez jó");
@@ -26,6 +28,12 @@ public class Main {
         }
 
         fajlBeolvas("bejegyzesek.txt");
+
+
+        for (Bejegyzes bejegyzes : bejegyzesLista){
+            System.out.println(bejegyzes);
+        }
+
 
 
     }
